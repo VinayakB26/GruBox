@@ -1,0 +1,12 @@
+<div>
+{% for sub in res %}
+    <h4>RollNo : {{sub.RollNo}}</h4>
+    {% for subname in SubName %}
+    <div class="topper">
+    {% if sub.SubjectId == subname.SubjectId %}
+      <p>{{subname.SubjectName}} : {{ sub.Marks }}</p>
+     {% endif %}
+    </div>
+  {% endfor %}
+  {% endfor %}
+</div>

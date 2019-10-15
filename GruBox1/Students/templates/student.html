@@ -1,0 +1,28 @@
+<div>
+
+
+<div class="student">
+ <h3>Name : {{ student.FirstName|capfirst }} {{ student.LastName|capfirst }}</h3>
+  <p>Roll No : {{ student.RollNo }}</p>
+  <p>Semester : {{ student.Semester}}</p>
+  <p>Class : {{ student.Class}}</p>
+</div>
+
+{% for sub in subject %}
+    {% for subname in SubjectName %}
+    <div class="topper">
+    {% if sub.SubjectId == subname.SubjectId %}
+      <p>{{subname.SubjectName}} : {{ sub.Marks }}</p>
+     {% endif %}
+    </div>
+  {% endfor %}
+  {% endfor %}
+  
+<a href="http://localhost:8000/Topper/">
+Check You Class Topper
+</a>
+<br>
+<a href="http://localhost:8000/subjectopper/">
+Check You Subejct Topper
+</a>
+</div>

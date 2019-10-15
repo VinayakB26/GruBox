@@ -1,0 +1,11 @@
+<div>
+  {% for topper in topper %}
+    <div class="topper">
+    <h3>Name : {{ topper.FirstName|capfirst }} {{ topper.LastName|capfirst }}</h3>
+      <p>Roll No : {{ topper.RollNo }}</p>
+      <p>Semester : {{ topper.Semester}}</p>
+      <p>Class : {{ topper.Class}}</p>
+      <p>Total Marks: {{TotalMarks}}</p>
+    </div>
+  {% endfor %}
+</div>
